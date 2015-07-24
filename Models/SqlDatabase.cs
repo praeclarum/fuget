@@ -10,7 +10,8 @@ namespace Fuget
 
 		public SqlDatabase ()
 		{
-			var connectionString = ConfigurationManager.ConnectionStrings["MainDatabase"].ConnectionString;
+			//var connectionString = ConfigurationManager.ConnectionStrings["MainDatabase"].ConnectionString;
+			var connectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_MainDatabase");
 
 			connection = new SqlConnection (connectionString);
 
