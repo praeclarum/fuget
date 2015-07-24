@@ -10,6 +10,8 @@ namespace Fuget.Controllers
 	{
 		public ActionResult Index ()
 		{
+			var db = new SqlDatabase ();
+			ViewBag["thing"] = db.Thing;
 			return View ();
 		}
 	}
